@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  /* De esta forma hago que el body ocupe todo el alto de mi ventana */
+}
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 30px;
+}
+.section-principal {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+/* Header */
+.header {
+  background-color: orange;
+}
+.nav {
+  display: flex;
+  gap: 10px;
+  margin: 5px 0 20px 10px;
+}
+@media (max-width: 500px) {
+  .nav {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .nav a {
+    text-align: center;
+  }
+}
+@media (max-width: 800px) {
+  .nav {
+    justify-content: center;
+    margin-left: 0;
+  }
+}
+.nav a,
+.boton {
+  background-color: orangered;
+  color: white;
+  border-radius: 2px;
+  text-decoration: none;
+  padding: 10px;
+}
+.nav a:hover {
+  background-color: #cfcfcf;
+  color: orangered;
+}
+.titulo-principal {
+  text-align: center;
+}
+
+/* Main */
+.container {
+  margin: 20px 0;
+}
+.img-plato,
+.img-cocina {
+  display: block;
+  width: 30%;
+  margin: 20px auto;
+}
+@media (max-width: 860px) {
+  .img-plato,
+  .img-cocina {
+    width: 300px;
+  }
+}
+.boton {
+  align-self: flex-start;
+}
+.boton:hover {
+  background-color: #cfcfcf;
+  color: orangered;
+}
+
+/* Acerca de */
+.texto-descriptivo {
+  text-align: justify;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* Contacto */
+.texto-contacto {
+  font-size: 20px;
+}
+
+/* Receta */
+.lista-ingredientes {
+  margin: 20px 0 0 40px;
+}
+
+/* Registro */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  gap: 15px;
+}
+#nombre,
+#apellido,
+#direccion,
+#ciudad,
+#cp,
+#fecha {
+  text-align: center;
+  font-size: 20px;
+  width: 300px;
+  height: 30px;
+}
+#boton-enviar {
+  align-self: start;
+  padding: 10px 30px;
+}
+.genero p,
+.estudios p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.genero label,
+.estudios label {
+  margin-right: 10px;
+}
+
+/* Show Data */
+.show-data {
+  align-items: center;
+}
+.show-data table {
+  border: 1px solid;
+  width: 500px;
+  height: 500px;
+  font-size: 25px;
+}
+.show-data td,
+.show-data th {
+  border: 1px solid;
+}
+
+/* Sucursales */
+.list-directions {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  gap: 20px;
+}
+.container-maps {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: auto;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 40vh;
+}
+.container-maps iframe {
+  height: 300px;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: orange;
+}
+.redes {
+  display: flex;
+  column-gap: 20px;
+}
+.redes svg {
+  width: 50px;
+  height: 50px;
+}
+.footer p {
+  padding-bottom: 10px;
+}
